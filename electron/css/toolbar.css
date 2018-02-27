@@ -1,6 +1,7 @@
 .toolbar {
   width: 40px;
   background-color: #dddddd;
+  border-right: 1px solid #aaaaaa;
 }
 
 .toolbar-button {

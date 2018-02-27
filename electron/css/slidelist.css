@@ -1,0 +1,27 @@
+.slidelist {
+  width: 200px;
+  background-color: #dddddd;
+  color: #fff;
+  border-right: 1px solid #aaaaaa;
+}
+
+.slide-item {
+  background-color: #000022;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+}
+
+.slide-info {
+  text-align: center;
+}
+
+#slidelist-new {
+  background-color: green;
+}
+
+#slidelist-new:hover {
+  background-color: lightgreen;
+}
