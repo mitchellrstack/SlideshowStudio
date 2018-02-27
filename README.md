@@ -14,11 +14,11 @@ An electron webapp for creating, editing, and exporting slideshows in many forms
 
 ## Important notes/features
 - Saves slideshows locally as JSON files
-- Editing a slide iis based on its selected type metadata
+- Editing a slide is based on its selected type metadata
   - Folder containing all types as their own modules
 - Local server for hosting and refreshing source files on change
 - Live preview window showing resulting slideshow
-- All choice of theme as well as custom themes
+- All choice of themes from RevealJS as well as custom themes
   - Folder containing all themes
 - Export source code for easy uploading to website
 - Export slideshow as PowerPoint
