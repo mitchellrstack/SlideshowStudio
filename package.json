@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^1.8.2"
+  },
+  "dependencies": {
+    "superstruct": "^0.5.1"
   }
 }
