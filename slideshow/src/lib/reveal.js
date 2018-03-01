@@ -5,10 +5,7 @@
  *
  * Copyright (C) 2017 Hakim El Hattab, http://hakim.se
  */
-(function (root, factory) {
-  // Node. Doesn't work with CommonJS
-  module.exports = factory()
-}(this, function () {
+export default (function () {
   var Reveal
 
   // The reveal.js version
@@ -4552,4 +4549,4 @@
   }
 
   return Reveal
-}))
+}())
