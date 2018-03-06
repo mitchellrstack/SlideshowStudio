@@ -1,0 +1,23 @@
+{
+  "test": "hello",
+  "slides": [
+    {
+        "type": "student-story",
+        "backgroundImage": "hcur_perry.jpg",
+        "header": "Discovered how to prepare forests for environmental shifts",
+        "paragraph": "Emily Perry '18, Environmental Conservation & Sustainability"
+      },
+      {
+        "type": "student-story",
+        "backgroundImage": "hcur_hutchison.jpeg",
+        "header": "Disproved a long-established mathematical theory (Kaplansky’s 1973 Conjecture)",
+        "paragraph": "Kirsten Hutchison '06 & Derek Pouliot '06, Mathematics"
+      },
+      {
+        "type": "student-story",
+        "backgroundImage": "hcur_emily.jpg",
+        "header": "Inspired the establishment of a nursing education facility in Uganda",
+        "paragraph": "Emily Roberts '08, Nursing"
+      }
+  ]
+}

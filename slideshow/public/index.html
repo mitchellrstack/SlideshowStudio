@@ -20,11 +20,56 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+
+    <style>
+      html, body, #root, .app {
+          width: 100%; height: 100%;
+          margin: 0;
+          overflow: hidden;
+        }
+
+        #loader {
+          height: 100%; width: 100%;
+          z-index: 1000;
+          background-color: rgb(38, 54, 69);
+        }
+
+        #loader img {
+          position: absolute;
+          left: 50%; top: 50%;
+          z-index: 1001;
+          transform: translate(-50%, -50%);
+        }
+
+        #content {
+          display: none;
+        }
+
+        .loaded #loader {
+          display: none;
+        }
+
+        .loaded #content {
+          display: block;
+        }
+
+        .is-iframed header, .is-iframed .cd-nav-trigger {
+          display: none;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <noscript>
-      You need to enable JavaScript to run this app.
+      <p>For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="https://www.enable-javascript.com/" rel="noopener noreferrer" target="_blank"> instructions how to enable JavaScript in your web browser</a>.</p>
     </noscript>
+  
     <div id="root"></div>
     <!--
       This HTML file is a template.
