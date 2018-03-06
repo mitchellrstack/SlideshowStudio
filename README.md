@@ -9,6 +9,11 @@ An electron webapp for creating, editing, and exporting slideshows in many forms
 - Electron-builder (Autoupdating [See electron guides])
 - RevealJS (Slideshow Framework)
 - SuperStruct (For data schema/validation)
+- FilePond (For Image uploading?)
+
+## Reveal
+Version 3.6.0
+I rebuilt the reveal.js script to conform to Standard JS and to remove unnecessary features.
 
 ## Wireframe
 
