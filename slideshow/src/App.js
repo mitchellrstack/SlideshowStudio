@@ -1,30 +1,21 @@
 import React, { Component } from 'react'
-import Reveal from './lib/reveal.js'
+import Slideshow from './components/Slideshow.js'
+import Loader from './components/Loader.js'
+import Wrapper from './components/Wrapper.js'
+import Extras from './components/Extras.js'
 
-class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      options: {},
-      slides: []
-    }
-  }
-
-  componentDidMount () {
-    // Once DOM is rendered, initialize Reveal
-    Reveal.initialize()
-  }
-
+export default class App extends Component {
   render () {
-    const slides = this.state.slides
     return (
-      <div className='reveal'>
-        <div className='slides'>
-          { slides }
-        </div>
+      <div className='app'>
+        <Loader />
+
+        <Wrapper>
+          <Slideshow />
+
+          <Extras />
+        </Wrapper>
       </div>
     )
   }
 }
-
-export default App

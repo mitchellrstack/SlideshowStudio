@@ -1,0 +1,991 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+  font-family: "Glypha LT Pro W04 Light";
+  src: url("../fonts/1361714/5c9c31e9-64fc-492e-8384-74111ee6d369.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/1361714/906fc8bf-c048-4ccb-aee1-b5e89cababd5.woff2") format("woff2"),
+       url("../fonts/1361714/5eb97a46-eaef-4f1e-932b-94b6597692e1.woff") format("woff"),
+       url("../fonts/1361714/636594b0-dc59-4d43-bfe2-38a642797bd9.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Glypha LT Pro W04 Black";
+  src: url("../fonts/1361704/174a6a15-d2dd-4e90-9909-7f8861ee4ce1.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/1361704/64019361-6fcf-4505-8968-c0794028ad21.woff2") format("woff2"),
+       url("../fonts/1361704/53ada641-bc43-4c1d-a852-08004fafda69.woff") format("woff"),
+       url("../fonts/1361704/00bcc17f-2342-4a16-9a56-351a2e5bb527.ttf") format("truetype");
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+*,
+*::after,
+*::before {
+  content: '';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  z-index: 300!important;
+}
+
+body {
+  font-size: 95%;
+  color: #091d23;
+  background-color: rgb(38, 54, 69);
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Presentation */
+
+.js noscript {
+  display: none;
+}
+
+noscript p {
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+
+noscript p a {
+  text-decoration: underline;
+  color: blue;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  /* visibility: hidden; */
+}
+
+.no-js #content {
+  display: none;
+}
+
+.reveal h1 {
+  font-family: "Glypha LT Pro W04 Black", serif;
+  font-size: 2em;
+}
+
+.reveal .progress span {
+  background: #04b;
+}
+
+.reveal .reason-container {
+  padding: 25px;
+  text-align: center;
+}
+
+.reveal .number {
+  border-radius: 50%;
+  background-color: #04b;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Glypha LT Pro W04 Black", sans-serif;
+  font-size: 1.2em;
+  margin: 0;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.reveal .reason {
+  padding: 32px;
+  padding-top: 28px;
+  font-size: 1.7em;
+  font-family: "Glypha LT Pro W04 Black", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.45em;
+  text-transform: initial;
+  text-align: center;
+  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* For long reasons to fit desktop */
+.reveal .smaller {
+  font-size: 1.5em;
+}
+
+.reveal .reason-type {
+  margin-top: 50px;
+  font-size: 0.55em;
+  font-family: Glypha LT Pro W04 Black,serif;
+  /* background-color: white; */
+  letter-spacing: 2px;
+  text-shadow: black 0px 0px 50px;
+  color: #dadada;
+}
+
+.reveal .reason-header {
+  text-transform: initial;
+  text-shadow: black 0 0 50px;
+  font-size: 1.4em;
+}
+
+.reveal .reason-source {
+  font-family: "Glypha LT Pro W04 Black", sans-serif;
+  font-style: italic;
+  font-size: 0.4em;
+  margin-top: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  text-align: center;
+  display: block;
+}
+
+.reveal .reason-paragraph {
+  font-size: 0.67em;
+  font-family: Glypha LT Pro W04 Black,serif;
+  line-height: 1.5;
+}
+
+.reveal .reason-then-now {
+  font-size: 0.9em;
+  text-shadow: black 0 0 50px;
+  font-family: Glypha LT Pro W04 Black,serif;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 500px) {
+  .reveal .reason-type {
+    font-size: 0.8em;
+  }
+
+  .reveal .reason-paragraph {
+    font-size: 1em;
+  }
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.first-section h1 {
+  text-align: center;
+}
+
+.version-two h1 {
+  font-family: "Glypha LT Pro W04 Light", sans-serif;
+  font-weight: 300;
+  font-size: 1.9em;
+  text-transform: none;
+  line-height: 1.4em;
+  color: #ccc;
+}
+
+.version-two h2 {
+  font-family: "Glypha LT Pro W04 Black", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.7em;
+  line-height: 1.4em;
+}
+
+.version-two hr {
+  width: 25%;
+  border-top: 8px solid #5B6571;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.first-section p {
+  font-family: 'source sans pro', sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.version-two p {
+  color: #ccc;
+  font-style: initial;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.cta-section h1 {
+  text-align: center;
+  margin-bottom: 5%;
+  font-family: "Glypha LT Pro W04 Light", sans-serif;
+  font-weight: 300;
+  color: #ccc;
+  text-transform: none;
+}
+
+.cta-section a {
+  font-family: "Glypha LT Pro W04 Black", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #023CC0;
+  padding: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 10px;
+  margin-bottom: 5%;
+  z-index: 31;
+}
+
+@media only screen and (min-width: 768px) {
+  .cta-section a {
+    font-size: 0.6em;
+    padding: 15px;
+  }
+}
+
+.reveal .slide-background:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.reveal .controls {
+  width: 100%;
+  bottom: 30px;
+  transform: translate(0, -50%);
+}
+
+.reveal .controls .navigate-right {
+  border: 0;
+  border-right: 8px solid white;
+  border-bottom: 8px solid white;
+  width: 30px;
+  height: 30px;
+  transform: translate(0, -50%) rotate(-45deg);
+  border-left-width: 0;
+  border-left-color: transparent;
+  left: initial;
+  right: 16px;
+  border-radius: 7px;
+}
+
+.reveal .controls .navigate-right:focus {
+  outline: none;
+}
+
+.reveal .controls .navigate-left {
+  border: 0;
+  border-right: 8px solid white !important;
+  border-bottom: 8px solid white;
+  width: 30px;
+  height: 30px;
+  border-left-width: 0;
+  border-left-color: transparent;
+  transform: translate(0, -50%) rotate(135deg);
+  left: 32px;
+  border-radius: 7px;
+}
+
+.reveal .controls .navigate-left:focus {
+  outline: none;
+}
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-down {
+  display: none;
+}
+
+.cd-logo,
+.cd-nav-trigger {
+  position: fixed;
+  display: inline-block;
+}
+
+.cd-logo {
+  top: 14px;
+  left: 14px;
+  z-index: 350;
+}
+
+.cd-logo img {
+  display: block;
+  height: 3.5em;
+}
+
+.cd-nav-trigger {
+  top: 18px;
+  right: 18px;
+  height: 44px;
+  width: 44px;
+  z-index: 450!important;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.cd-nav-trigger .cd-icon {
+  /* icon created in CSS */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  background-color: #ffffff;
+  z-index: 300!important;
+}
+
+.cd-nav-trigger .cd-icon::before,
+.cd-nav-trigger .cd-icon:after {
+  /* upper and lower lines of the menu icon */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* apply transition to transform property */
+  -webkit-transition: -webkit-transform .3s;
+  -moz-transition: -moz-transform .3s;
+  transition: transform .3s;
+}
+
+.cd-nav-trigger .cd-icon::before {
+  -webkit-transform: translateY(-6px) rotate(0deg);
+  -moz-transform: translateY(-6px) rotate(0deg);
+  -ms-transform: translateY(-6px) rotate(0deg);
+  -o-transform: translateY(-6px) rotate(0deg);
+  transform: translateY(-6px) rotate(0deg);
+}
+
+.cd-nav-trigger .cd-icon::after {
+  -webkit-transform: translateY(6px) rotate(0deg);
+  -moz-transform: translateY(6px) rotate(0deg);
+  -ms-transform: translateY(6px) rotate(0deg);
+  -o-transform: translateY(6px) rotate(0deg);
+  transform: translateY(6px) rotate(0deg);
+}
+
+.cd-nav-trigger::before,
+.cd-nav-trigger::after {
+  /* 2 rounded colored backgrounds for the menu icon */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+}
+
+.cd-nav-trigger::before {
+  background-color: #474747;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.cd-nav-trigger::after {
+  background-color: rgb(38, 54, 69);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  transition-duration: 0s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.cd-nav-trigger.close-nav::before {
+  /* user clicks on the .cd-nav-trigger element - 1st rounded background disappears */
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+.cd-nav-trigger.close-nav::after {
+  /* user clicks on the .cd-nav-trigger element - 2nd rounded background appears */
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.cd-nav-trigger.close-nav .cd-icon {
+  /* user clicks on the .cd-nav-trigger element - transform the icon */
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.cd-nav-trigger.close-nav .cd-icon::before,
+.cd-nav-trigger.close-nav .cd-icon::after {
+  background-color: white;
+}
+
+.cd-nav-trigger.close-nav .cd-icon::before {
+  -webkit-transform: translateY(0) rotate(45deg);
+  -moz-transform: translateY(0) rotate(45deg);
+  -ms-transform: translateY(0) rotate(45deg);
+  -o-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+}
+
+.cd-nav-trigger.close-nav .cd-icon::after {
+  -webkit-transform: translateY(0) rotate(-45deg);
+  -moz-transform: translateY(0) rotate(-45deg);
+  -ms-transform: translateY(0) rotate(-45deg);
+  -o-transform: translateY(0) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
+}
+
+.cd-primary-nav {
+  /* by default it's hidden */
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 80px 5%;
+  z-index: 300!important;
+  background-color: #474747;
+  overflow: hidden;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.3s;
+  -moz-transition: visibility 0s, opacity 0.3s;
+  transition: visibility 0s, opacity 0.3s;
+  list-style: none;
+}
+
+.cd-primary-nav li {
+  margin: 1.6em 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.cd-primary-nav a {
+  font-family: "Glypha LT Pro W04 Black", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.no-touch .cd-primary-nav a:hover {
+  color: #ffffff;
+}
+
+.cd-primary-nav.fade-in {
+  /* navigation visible at the end of the circle animation */
+  visibility: visible;
+  opacity: 1;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-primary-nav li {
+    margin: 2em 0;
+  }
+  .cd-primary-nav a {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-primary-nav li {
+    margin: 2.6em 0;
+  }
+  .cd-primary-nav a {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
+
+.cd-overlay-nav,
+.cd-overlay-content {
+  /* containers of the 2 main rounded backgrounds - these containers are used to position the rounded bgs behind the menu icon */
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  height: 4px;
+  width: 4px;
+  -webkit-transform: translateX(-20px) translateY(20px);
+  -moz-transform: translateX(-20px) translateY(20px);
+  -ms-transform: translateX(-20px) translateY(20px);
+  -o-transform: translateX(-20px) translateY(20px);
+  transform: translateX(-20px) translateY(20px);
+}
+
+.cd-overlay-nav span,
+.cd-overlay-content span {
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+.cd-overlay-nav.is-hidden,
+.cd-overlay-content.is-hidden {
+  /* background fades out at the end of the animation */
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-overlay-nav {
+  /* main rounded colored bg 1 */
+  z-index: 290!important;
+}
+
+.cd-overlay-nav span {
+  background-color: #091d23;
+}
+
+.cd-overlay-content {
+  /* main rounded colored bg 2 */
+  z-index: 310!important;
+}
+
+.cd-overlay-content span {
+  background-color: rgb(38, 54, 69);
+}
+
+.cd-content {
+  /* just some dummy content */
+  height: 100%;
+  width: 100%;
+}
+
+.cd-primary-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cd-primary-nav .slideshow-version {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-family: 'Glypha LT Pro W04 Black', sans-serif;
+  color: #676767;
+
+}
+
+.cd-primary-nav ul li a.prominent {
+  background-color: #023CC0;
+  padding: 10px;
+}
+
+/* Extra Features */
+.extras {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  /* Gradient Background */
+  background: rgba(255,93,177,0);
+  background: -moz-linear-gradient(top, rgba(255,93,177,0) 0%, rgba(34,34,34,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,93,177,0)), color-stop(100%, rgba(34,34,34,1)));
+  background: -webkit-linear-gradient(top, rgba(255,93,177,0) 0%, rgba(34,34,34,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,93,177,0) 0%, rgba(34,34,34,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,93,177,0) 0%, rgba(34,34,34,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,93,177,0) 0%, rgba(34,34,34,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#222222', GradientType=0 );
+}
+
+.extra-button {
+  padding: 10px;
+  display: inline-block;
+}
+
+.extra-button a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.extra-button a i {
+  font-size: 32px;
+}
+
+.extra-button .share i {
+  font-size: 28px;
+}
+
+.extras-fullscreen {
+  float: right;
+}
+
+.extras-autoplay {
+  float: left;
+}
+
+.reveal .playback {
+  display: none;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
