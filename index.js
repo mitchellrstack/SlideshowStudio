@@ -1,6 +1,7 @@
 const { exec } = require('child_process')
 
-exec('cd slideshow && npm run start', (error, stdout, stderr) => {
+// Executes starting local react development server to be shown in iframe
+exec('cd slideshow && npm run start && cd .. && electron electron/main.js', (error, stdout, stderr) => {
   if (error) {
     console.error(`exec error: ${error}`)
     return
@@ -8,3 +9,4 @@ exec('cd slideshow && npm run start', (error, stdout, stderr) => {
   console.log(`stdout: ${stdout}`)
   console.log(`stderr: ${stderr}`)
 })
+
