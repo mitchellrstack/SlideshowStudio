@@ -2,7 +2,7 @@
   "name": "SlideshowStudio",
   "version": "0.0.1",
   "description": "An electron webapp for creating, editing, and exporting slideshows in many forms like source code, PowerPoint, and PDF.",
-  "main": "electron/main.js",
+  "main": "index.js",
   "scripts": {
     "start": "electron electron/main.js"
   },
