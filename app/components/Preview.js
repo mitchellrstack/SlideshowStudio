@@ -21,7 +21,7 @@ export default class Preview extends Component {
         <PreviewControls {...this.state}
           onEnter={(e) => this.setState({iframe: {current: e}})}
           onRefresh={(e) => { document.getElementById('preview-iframe').src = this.state.iframe.current }}
-          onBack={(e) => document.getElementById('preview-iframe').contentWindow.goBack}
+          onBack={(e) => console.log('Back', e)}
           onForward={(e) => console.log('Forward', e)} />
         <iframe id='preview-iframe' className={styles.iframe} src={this.state.iframe.current} />
       </div>
