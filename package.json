@@ -1,7 +1,7 @@
 {
   "name": "SlideshowStudio",
   "productName": "SlideshowStudio",
-  "version": "0.0.1",
+  "version": "0.1.31",
   "description": "An electron webapp for creating, editing, and exporting slideshows in many forms like source code, PowerPoint, and PDF.",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
