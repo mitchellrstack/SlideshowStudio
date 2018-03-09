@@ -15,8 +15,6 @@ An electron webapp for creating, editing, and exporting slideshows in many forms
 Version 3.6.0
 I rebuilt the reveal.js script to conform to Standard JS and to remove unnecessary features.
 
-## Wireframe
-
 ## Important notes/features
 - Saves slideshows locally as JSON files
 - Editing a slide is based on its selected type metadata
