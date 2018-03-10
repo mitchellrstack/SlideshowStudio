@@ -15,14 +15,22 @@ export default class Preview extends Component {
     }
   }
 
+  goBack (iframe) {
+    iframe.contentWindow.history.back()
+  }
+
+  goForward (iframe) {
+    iframe.contentWindow.history.forward()
+  }
+
   render () {
     return (
       <div className={'siimple-box ' + styles.preview}>
         <PreviewControls {...this.state}
           onEnter={(e) => this.setState({iframe: {current: e}})}
           onRefresh={(e) => { document.getElementById('preview-iframe').src = this.state.iframe.current }}
-          onBack={(e) => console.log('Back', e)}
-          onForward={(e) => console.log('Forward', e)} />
+          onBack={(e) => { this.goBack(document.getElementById('preview-iframe')) }}
+          onForward={(e) => { this.goForward(document.getElementById('preview-iframe')) }} />
         <iframe id='preview-iframe' className={styles.iframe} src={this.state.iframe.current} />
       </div>
     )

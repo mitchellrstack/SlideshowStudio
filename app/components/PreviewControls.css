@@ -16,3 +16,7 @@
   height: 30px;
   padding: 3px;
 }
+
+.button:focus {
+  outline: none;
+}

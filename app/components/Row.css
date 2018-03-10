@@ -1,6 +1,6 @@
 .row {
   display: flex;
-  height: calc(100% - 5px);
+  height: 100%;
   justify-content: space-around;
   align-items: stretch;
 }

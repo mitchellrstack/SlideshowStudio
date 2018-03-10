@@ -9,8 +9,6 @@ export default class Column extends Component {
       resizable: this.props.resizable || true,
       width: this.props.width
     }
-
-    console.log(this.state.width)
   }
 
   render () {
