@@ -1,7 +1,6 @@
 .preview {
   height: calc(100% - 20px);
   padding: 1px;
-  margin: 4px;
   float: right;
   background-color: #ffffff;
 }

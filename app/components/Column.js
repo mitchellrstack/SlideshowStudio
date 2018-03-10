@@ -7,13 +7,15 @@ export default class Column extends Component {
     super(props)
     this.state = {
       resizable: this.props.resizable || true,
-      width: this.props.width || 1
+      width: this.props.width
     }
+
+    console.log(this.state.width)
   }
 
   render () {
     return (
-      <div className={'siimple-grid-col siimple-grid-col--' + this.state.width + ' ' + styles.column}>
+      <div className={styles.column} style={{width: this.props.width}}>
         {this.props.children}
       </div>
     )
