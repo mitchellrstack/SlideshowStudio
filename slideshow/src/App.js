@@ -10,7 +10,7 @@ export default class App extends Component {
       <div className='app'>
         <Loader />
 
-        <Wrapper>
+        <Wrapper hidden>
           <Slideshow />
 
           <Extras />
