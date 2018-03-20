@@ -9,8 +9,8 @@ export default class Preview extends Component {
     super(props)
     this.state = {
       iframe: {
-        src: 'https://feathericons.com/',
-        current: 'https://feathericons.com/'
+        src: 'https://localhost:3000',
+        current: 'https://localhost:3000'
       }
     }
   }
